@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  /* font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer base {
+  button {
+    @apply py-2 px-2 rounded-md focus:outline-none;
+  }
+}
+
+@layer components {
+  .btn-theme {
+    @apply bg-gray-300 border-2 border-transparent shadow dark:bg-gray-600 hover:border-gray-500 dark:hover:border-gray-300;
+  }
+}
