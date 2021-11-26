@@ -41,7 +41,7 @@ const Navbar = (props: Props) => {
 
   return (
     <>
-      <div className="flex-col p-4 mx-auto w-full min-h-screen antialiased bg-gray-100 dark:bg-gray-900 transition duration-300">
+      <div className="flex-col p-4 mx-auto w-full min-h-screen antialiased bg-gray-50 dark:bg-gray-900 transition duration-300">
         <nav className="hidden md:flex w-full p-4 h-24 justify-center">
           <div className="flex w-1/2 mx-auto justify-between items-center">
             <div className="flex">
@@ -79,7 +79,7 @@ const Navbar = (props: Props) => {
             <li>Snippets</li>
           </ul>
         </div>
-        <div className="flex flex-grow w-full md:w-1/2 mt-6 mx-auto justify-between items-center">
+        <div className="flex-col flex-grow w-full md:w-1/2 mt-6 mx-auto justify-between items-center">
           {props.children}
         </div>
       </div>
