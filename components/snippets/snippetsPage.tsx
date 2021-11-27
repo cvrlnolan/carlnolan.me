@@ -1,4 +1,5 @@
 import React from "react";
+import SnippetCard from "@/components/snippets/snippetCard";
 
 const SnippetsPage = () => {
   return (
@@ -13,6 +14,11 @@ const SnippetsPage = () => {
           suscipit totam corporis perspiciatis voluptates necessitatibus quia ad
           nostrum enim.
         </p>
+      </div>
+      <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {[...Array(6)].map((e: any, i: number) => (
+          <SnippetCard key={i} />
+        ))}
       </div>
     </>
   );
