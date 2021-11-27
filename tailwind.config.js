@@ -1,4 +1,4 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   mode: "jit",
@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      sans: ["IBM Plex Sans", "sans-serif"],
+      sans: ["IBM Plex Sans", ...fontFamily.sans],
     }
   },
   variants: {

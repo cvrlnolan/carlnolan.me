@@ -1,6 +1,7 @@
 import React, { useState, useEffect, ReactNode } from "react";
 import { useTheme } from "next-themes";
 import { SunIcon, MoonIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import Footer from "@/components/footer";
 
 type Props = {
   children?: ReactNode;
@@ -43,7 +44,7 @@ const Navbar = (props: Props) => {
     <>
       <div className="flex-col p-4 mx-auto w-full min-h-screen antialiased bg-gray-50 dark:bg-gray-900 transition duration-300">
         <nav className="hidden md:flex w-full p-4 h-24 justify-center">
-          <div className="flex w-1/2 mx-auto justify-between items-center">
+          <div className="flex w-3/5 mx-auto justify-between items-center">
             <div className="flex">
               <ul className="inline-flex space-x-4">
                 <li>Home</li>
@@ -79,9 +80,10 @@ const Navbar = (props: Props) => {
             <li>Snippets</li>
           </ul>
         </div>
-        <div className="flex-col flex-grow w-full md:w-1/2 mt-6 mx-auto justify-between items-center">
+        <div className="flex-col flex-grow w-full md:w-3/5 mt-6 mx-auto items-center">
           {props.children}
         </div>
+        <Footer />
       </div>
     </>
   );

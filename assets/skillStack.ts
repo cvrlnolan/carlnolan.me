@@ -1,4 +1,4 @@
-export const fronEnd = [
+export const frontEnd = [
   "JavaScript",
   "TypeScript",
   "Reactjs",
