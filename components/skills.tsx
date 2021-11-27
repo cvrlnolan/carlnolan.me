@@ -1,4 +1,5 @@
 import React from "react";
+import { fronEnd } from "@/assets/skillStack";
 
 const Skills = () => {
   return (
@@ -23,10 +24,14 @@ const Skills = () => {
               Frontend Development
             </td>
             <td className="px-6 py-4 text-gray-700 dark:text-gray-300">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim
-              quisquam cupiditate non quam laudantium voluptates provident
-              suscipit in voluptate, esse ut ullam fugit! Quod aliquam impedit,
-              cumque doloremque explicabo voluptate!
+              {fronEnd.map((skill: string, i: number) => (
+                <span
+                  key={i}
+                  className="inline-flex px-2 ml-2 rounded-full font-semibold text-sm text-gray-700 dark:text-gray-300 bg-gray-300 dark:bg-gray-600"
+                >
+                  {skill}
+                </span>
+              ))}
             </td>
           </tr>
         </tbody>
