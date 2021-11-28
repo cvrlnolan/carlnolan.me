@@ -4,12 +4,18 @@ const Introduction = () => {
   return (
     <>
       <div className="flex flex-wrap-reverse w-full justify-between items-center">
-        <div className="flex w-full md:w-1/2 justify-center">
-          <p className="text-gray-700 dark:text-gray-300">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-            necessitatibus, ullam possimus corporis vel est pariatur veritatis,
-            blanditiis provident eum ducimus sunt amet odio fugit, architecto
-            ipsum ad eveniet minus!
+        <div className="flex-col w-full md:w-1/2 justify-center">
+          <p className="text-gray-700 dark:text-gray-300 text-center md:text-justify">
+            Writes clean code.
+          </p>
+          <p className="text-gray-700 dark:text-gray-300 text-center md:text-justify">
+            Fueled by simplicity.
+          </p>
+          <p className="text-gray-700 dark:text-gray-300 text-center md:text-justify">
+            Navigates the web like a pirate.
+          </p>
+          <p className="text-gray-700 dark:text-gray-300 text-center md:text-justify">
+            Welcome aboard.
           </p>
         </div>
         <div className="flex mx-auto md:mx-0 mb-4 md:mb-0">

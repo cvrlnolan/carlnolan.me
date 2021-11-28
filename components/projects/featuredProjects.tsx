@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import ProjectCard from "@/components/projects/projectCard";
 import { ArrowCircleRightIcon } from "@heroicons/react/outline";
+import { projects } from "@/assets/projects";
+import type { Project } from "@/assets/types";
 
 const FeaturedProjects = () => {
   return (
@@ -10,8 +12,14 @@ const FeaturedProjects = () => {
         Featured Projects
       </p>
       <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {[...Array(3)].map((e: any, i: number) => (
-          <ProjectCard key={i} />
+        {projects.slice(0, 3).map((project: Project, i: number) => (
+          <ProjectCard
+            key={i}
+            id={project.id}
+            title={project.title}
+            tools={project.tools}
+            link={project.link}
+          />
         ))}
       </div>
       <div className="flex w-full mt-4 justify-end">

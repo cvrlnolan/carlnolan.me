@@ -1,5 +1,7 @@
 import React from "react";
 import ProjectCard from "@/components/projects/projectCard";
+import { projects } from "@/assets/projects";
+import type { Project } from "@/assets/types";
 
 const ProjectsPage = () => {
   return (
@@ -16,8 +18,14 @@ const ProjectsPage = () => {
         </p>
       </div>
       <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {[...Array(9)].map((e: any, i: number) => (
-          <ProjectCard key={i} />
+        {projects.map((project: Project, i: number) => (
+          <ProjectCard
+            key={i}
+            id={project.id}
+            title={project.title}
+            tools={project.tools}
+            link={project.link}
+          />
         ))}
       </div>
     </>

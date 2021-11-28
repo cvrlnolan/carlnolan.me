@@ -11,14 +11,14 @@ const Footer = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <ul className="block space-y-4">
-              <li>Item</li>
-              <li>Item</li>
-              <li>Item</li>
+              <li>Home</li>
+              <li>Projects</li>
+              <li>Snippets</li>
             </ul>
             <ul className="block space-y-4">
-              <li>Item</li>
-              <li>Item</li>
-              <li>Item</li>
+              <li>GitHub</li>
+              <li>Twitter</li>
+              <li>Mail</li>
             </ul>
           </div>
         </div>
