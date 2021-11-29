@@ -4,3 +4,12 @@ export type Project = {
   tools: string[];
   link: string;
 };
+
+export type Experience = {
+  id: number;
+  companyName: string;
+  title: string;
+  period: string;
+  jobType: string;
+  description: string;
+};

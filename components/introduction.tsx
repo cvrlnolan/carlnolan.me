@@ -18,7 +18,7 @@ const Introduction = () => {
             Navigates the web like a pirate.
           </p>
           <p className="text-gray-700 dark:text-gray-300 text-center md:text-justify">
-            Welcome aboard.
+            A free electron in a nuclear world.
           </p>
         </div>
         <div className="flex mx-auto md:mx-0 mb-4 md:mb-0">

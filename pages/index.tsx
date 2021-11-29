@@ -4,7 +4,7 @@ import Head from "next/head";
 import Navbar from "@/components/navbar";
 import Introduction from "@/components/introduction";
 import FeaturedProjects from "@/components/projects/featuredProjects";
-import Experience from "@/components/experience/experience";
+import ExperienceTimeline from "@/components/experience/experience";
 import Skills from "@/components/skills/masteredSkills";
 
 const Home: NextPage = () => {
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <Introduction />
         <FeaturedProjects />
         <Skills />
-        <Experience />
+        <ExperienceTimeline />
       </Navbar>
     </>
   );

@@ -1,19 +1,29 @@
 import React from "react";
 import ExperienceBox from "@/components/experience/experienceBox";
+import { experiences } from "@/assets/experiences";
+import type { Experience } from "@/assets/types";
 
-const Experience = () => {
+const ExperienceTimeline = () => {
   return (
     <>
       <p className="font-bold text-xl text-gray-700 dark:text-gray-300 my-8">
         Experience
       </p>
       <div className="grid w-full grid-cols-1 gap-4">
-        {[...Array(3)].map((e: any, i: number) => (
-          <ExperienceBox key={i} />
+        {experiences.map((experience: Experience, i: number) => (
+          <ExperienceBox
+            key={i}
+            id={experience.id}
+            companyName={experience.companyName}
+            title={experience.title}
+            period={experience.period}
+            jobType={experience.jobType}
+            description={experience.description}
+          />
         ))}
       </div>
     </>
   );
 };
 
-export default Experience;
+export default ExperienceTimeline;
