@@ -9,12 +9,12 @@ const SnippetsPage = () => {
           Snippets
         </p>
         <p className="text-gray-700 dark:text-gray-300">
-          Here is the snippetyard, a piece of area where I lay down some tricks
-          or blocks of code which have been helpful during development &
-          production stages of some software I worked on.
+          Here is the snippetyard, a piece of area where I share some tricks or
+          blocks of code which have been helpful during development & production
+          stages of projects I worked on.
         </p>
         <p className="text-gray-700 dark:text-gray-300">
-          I personally resolve to this, than writing a blog 😝
+          I personally resolve to this, over blog writing 😝
         </p>
       </div>
       <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">

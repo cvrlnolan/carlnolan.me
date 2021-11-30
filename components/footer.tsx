@@ -15,29 +15,29 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <ul className="block space-y-4">
               <Link href="/" passHref>
-                <li className="cursor-pointer">Home</li>
+                <li className="link">Home</li>
               </Link>
               <Link href="/projects" passHref>
-                <li className="cursor-pointer">Projects</li>
+                <li className="link">Projects</li>
               </Link>
               <Link href="/snippets" passHref>
-                <li className="cursor-pointer">Snippetyard</li>
+                <li className="link">Snippetyard</li>
               </Link>
             </ul>
             <ul className="block space-y-4">
               <Link href="https://github.com/cvrlnolan" passHref>
-                <li className="cursor-pointer">GitHub</li>
+                <li className="link">GitHub</li>
               </Link>
               <Link href="https://twitter.com" passHref>
-                <li className="cursor-pointer">Twitter</li>
+                <li className="link">Twitter</li>
               </Link>
               <Link href="mailto:georgecvrl@gmail.com" passHref>
-                <li className="cursor-pointer">Mail</li>
+                <li className="link">Mail</li>
               </Link>
             </ul>
             <ul className="block space-y-4">
               <Link href="#" passHref>
-                <li className="cursor-pointer">Resume</li>
+                <li className="link">Resume</li>
               </Link>
             </ul>
           </div>

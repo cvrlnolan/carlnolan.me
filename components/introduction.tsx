@@ -5,9 +5,6 @@ const Introduction = () => {
     <>
       <div className="flex flex-wrap-reverse w-full justify-between items-center">
         <div className="flex-col w-full md:w-1/2 justify-center">
-          {/* <p className="text-3xl font-bold text-gray-700 dark:text-gray-300 text-center md:text-justify">
-            Carl Nolan
-          </p> */}
           <p className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-purple-500 text-center md:text-justify">
             Carl Nolan
           </p>

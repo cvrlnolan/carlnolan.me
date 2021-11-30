@@ -49,13 +49,13 @@ const Navbar = (props: Props) => {
             <div className="flex">
               <ul className="inline-flex space-x-4">
                 <Link href="/" passHref>
-                  <li className="cursor-pointer">Home</li>
+                  <li className="link">Home</li>
                 </Link>
                 <Link href="/projects" passHref>
-                  <li className="cursor-pointer">Projects</li>
+                  <li className="link">Projects</li>
                 </Link>
                 <Link href="/snippets" passHref>
-                  <li className="cursor-pointer">Snippetyard</li>
+                  <li className="link">Snippetyard</li>
                 </Link>
               </ul>
             </div>
@@ -83,13 +83,13 @@ const Navbar = (props: Props) => {
         >
           <ul className="block space-y-4">
             <Link href="/" passHref>
-              <li className="cursor-pointer">Home</li>
+              <li className="link">Home</li>
             </Link>
             <Link href="/projects" passHref>
-              <li className="cursor-pointer">Projects</li>
+              <li className="link">Projects</li>
             </Link>
             <Link href="/snippets" passHref>
-              <li className="cursor-pointer">Snippetyard</li>
+              <li className="link">Snippetyard</li>
             </Link>
           </ul>
         </div>
