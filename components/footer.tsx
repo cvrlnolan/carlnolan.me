@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -11,16 +12,33 @@ const Footer = () => {
               Spotify Playing Media
             </span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <ul className="block space-y-4">
-              <li>Home</li>
-              <li>Projects</li>
-              <li>Snippets</li>
+              <Link href="/" passHref>
+                <li className="cursor-pointer">Home</li>
+              </Link>
+              <Link href="/projects" passHref>
+                <li className="cursor-pointer">Projects</li>
+              </Link>
+              <Link href="/snippets" passHref>
+                <li className="cursor-pointer">Snippetyard</li>
+              </Link>
             </ul>
             <ul className="block space-y-4">
-              <li>GitHub</li>
-              <li>Twitter</li>
-              <li>Mail</li>
+              <Link href="https://github.com/cvrlnolan" passHref>
+                <li className="cursor-pointer">GitHub</li>
+              </Link>
+              <Link href="https://twitter.com" passHref>
+                <li className="cursor-pointer">Twitter</li>
+              </Link>
+              <Link href="mailto:georgecvrl@gmail.com" passHref>
+                <li className="cursor-pointer">Mail</li>
+              </Link>
+            </ul>
+            <ul className="block space-y-4">
+              <Link href="#" passHref>
+                <li className="cursor-pointer">Resume</li>
+              </Link>
             </ul>
           </div>
           <div className="flex justify-center lg:justify-end">

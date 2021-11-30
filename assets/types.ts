@@ -13,3 +13,8 @@ export type Experience = {
   jobType: string;
   description: string;
 };
+
+export type SkillProps = {
+  skill: string;
+  technologies: string[];
+};

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, ReactNode } from "react";
+import Link from "next/link";
 import { useTheme } from "next-themes";
 import { SunIcon, MoonIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Footer from "@/components/footer";
@@ -47,9 +48,15 @@ const Navbar = (props: Props) => {
           <div className="flex w-3/5 mx-auto justify-between items-center">
             <div className="flex">
               <ul className="inline-flex space-x-4">
-                <li>Home</li>
-                <li>Projects</li>
-                <li>Snippets</li>
+                <Link href="/" passHref>
+                  <li className="cursor-pointer">Home</li>
+                </Link>
+                <Link href="/projects" passHref>
+                  <li className="cursor-pointer">Projects</li>
+                </Link>
+                <Link href="/snippets" passHref>
+                  <li className="cursor-pointer">Snippetyard</li>
+                </Link>
               </ul>
             </div>
             <div className="flex">{renderThemeButton()}</div>
@@ -75,9 +82,15 @@ const Navbar = (props: Props) => {
           } w-full mx-auto justify-center md:hidden`}
         >
           <ul className="block space-y-4">
-            <li>Home</li>
-            <li>Projects</li>
-            <li>Snippets</li>
+            <Link href="/" passHref>
+              <li className="cursor-pointer">Home</li>
+            </Link>
+            <Link href="/projects" passHref>
+              <li className="cursor-pointer">Projects</li>
+            </Link>
+            <Link href="/snippets" passHref>
+              <li className="cursor-pointer">Snippetyard</li>
+            </Link>
           </ul>
         </div>
         <div className="flex-col flex-grow w-full md:w-3/5 mt-6 mx-auto items-center">

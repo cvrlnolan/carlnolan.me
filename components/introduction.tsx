@@ -5,28 +5,33 @@ const Introduction = () => {
     <>
       <div className="flex flex-wrap-reverse w-full justify-between items-center">
         <div className="flex-col w-full md:w-1/2 justify-center">
-          <p className="text-3xl font-bold text-gray-700 dark:text-gray-300 text-center md:text-justify">
+          {/* <p className="text-3xl font-bold text-gray-700 dark:text-gray-300 text-center md:text-justify">
+            Carl Nolan
+          </p> */}
+          <p className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-purple-500 text-center md:text-justify">
             Carl Nolan
           </p>
-          <p className="text-gray-700 dark:text-gray-300 text-center md:text-justify">
+          <p className="bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-green-500 text-center md:text-justify">
             Writes clean code.
           </p>
-          <p className="text-gray-700 dark:text-gray-300 text-center md:text-justify">
+          <p className="bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-green-500 text-center md:text-justify">
             Fueled by simplicity.
           </p>
-          <p className="text-gray-700 dark:text-gray-300 text-center md:text-justify">
+          <p className="bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-green-500 text-center md:text-justify">
             Navigates the web like a pirate.
           </p>
-          <p className="text-gray-700 dark:text-gray-300 text-center md:text-justify">
+          <p className="bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-green-500 text-center md:text-justify">
             A free electron in a nuclear world.
           </p>
         </div>
         <div className="flex mx-auto md:mx-0 mb-4 md:mb-0">
-          <img
-            alt="Carl"
-            src="./me.jpg"
-            className="w-32 h-32 rounded-full object-cover border-2 border-gray-300 dark:border-gray-600"
-          />
+          <div className="p-0.5 bg-gradient-to-tr from-green-300 to-purple-500 rounded-full">
+            <img
+              alt="Carl"
+              src="./me.jpg"
+              className="w-32 h-32 rounded-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </>

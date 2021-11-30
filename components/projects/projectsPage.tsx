@@ -11,10 +11,8 @@ const ProjectsPage = () => {
           Projects
         </p>
         <p className="text-gray-700 dark:text-gray-300">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat
-          culpa nemo a illo, nobis eveniet eum laborum ratione. Deleniti rerum
-          suscipit totam corporis perspiciatis voluptates necessitatibus quia ad
-          nostrum enim.
+          Welcome to my project gallery where I showcase hobby & experimental
+          projects with regards to my skill set.
         </p>
       </div>
       <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
