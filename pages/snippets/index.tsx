@@ -7,25 +7,9 @@ import Head from "next/head";
 import Navbar from "@/components/navbar";
 import SnippetsPage from "@/components/snippets/snippetsPage";
 import { root, getFiles } from "@/lib/getMDX";
+import type { SnippetProps } from "@/assets/types";
 
-type Data = {
-  title: string;
-  publishedAt: string;
-  summary: string;
-  slug: string;
-};
-
-type BlogProps = {
-  content: string;
-  data: Data;
-  filePath: string;
-};
-
-type Props = {
-  posts: BlogProps[];
-};
-
-function Snippets(props: Props) {
+function Snippets(props: SnippetProps) {
   return (
     <>
       <Head>

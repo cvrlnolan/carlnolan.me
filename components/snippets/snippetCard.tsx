@@ -1,14 +1,8 @@
 import React from "react";
 import Link from "next/link";
+import type { SnippetData } from "@/assets/types";
 
-type Props = {
-  title: string;
-  publishedAt: string;
-  summary: string;
-  slug: string;
-};
-
-const SnippetCard = (props: Props) => {
+const SnippetCard = (props: SnippetData) => {
   return (
     <>
       <Link href={`/snippets/${props.slug}`} passHref>

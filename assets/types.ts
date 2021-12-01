@@ -18,3 +18,20 @@ export type SkillProps = {
   skill: string;
   technologies: string[];
 };
+
+export type SnippetData = {
+  title: string;
+  publishedAt: string;
+  summary: string;
+  slug: string;
+};
+
+export type SnippetPost = {
+  content: string;
+  data: SnippetData;
+  filePath: string;
+};
+
+export type SnippetProps = {
+  posts: SnippetPost[];
+};
