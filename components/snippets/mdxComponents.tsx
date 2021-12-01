@@ -1,4 +1,6 @@
 import React from "react";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 const MDXComponents = {
   h1: (props: any) => (
@@ -11,8 +13,11 @@ const MDXComponents = {
     />
   ),
   pre: (props: any) => (
-    <pre className="w-full overflow-x-auto p-4 bg-gray-200 dark:bg-gray-700 rounded shadow-md">
-      <code {...props} />
+    <pre className="w-full overflow-x-auto">
+      <SyntaxHighlighter language="tsx" style={dracula} showLineNumbers>
+        {props.children.props.children}
+      </SyntaxHighlighter>
+      {/* <code {...props} /> */}
     </pre>
   ),
 };
