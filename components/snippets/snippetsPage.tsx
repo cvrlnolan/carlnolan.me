@@ -1,7 +1,24 @@
 import React from "react";
 import SnippetCard from "@/components/snippets/snippetCard";
 
-const SnippetsPage = () => {
+type Data = {
+  title: string;
+  publishedAt: string;
+  summary: string;
+  slug: string;
+};
+
+type BlogProps = {
+  content: string;
+  data: Data;
+  filePath: string;
+};
+
+type Props = {
+  posts: BlogProps[];
+};
+
+const SnippetsPage = (props: Props) => {
   return (
     <>
       <div className="block w-full my-8 space-y-4">
@@ -18,8 +35,17 @@ const SnippetsPage = () => {
         </p>
       </div>
       <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {[...Array(6)].map((e: any, i: number) => (
+        {/* {[...Array(6)].map((e: any, i: number) => (
           <SnippetCard key={i} />
+        ))} */}
+        {props.posts.map((post: BlogProps) => (
+          <SnippetCard
+            key={post.data.title}
+            title={post.data.title}
+            publishedAt={post.data.publishedAt}
+            summary={post.data.summary}
+            slug={post.data.slug}
+          />
         ))}
       </div>
     </>

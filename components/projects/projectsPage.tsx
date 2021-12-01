@@ -11,8 +11,8 @@ const ProjectsPage = () => {
           Projects
         </p>
         <p className="text-gray-700 dark:text-gray-300">
-          Welcome to my project gallery where I showcase hobby & experimental
-          projects with regards to my skill set.
+          Welcome to my open-source project gallery where I showcase hobby &
+          experimental projects with regards to my skill set.
         </p>
       </div>
       <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
