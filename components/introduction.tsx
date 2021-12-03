@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import myPic from "public/me.jpg";
 
 const Introduction = () => {
   return (
@@ -22,11 +24,13 @@ const Introduction = () => {
           </p>
         </div>
         <div className="flex mx-auto md:mx-0 mb-4 md:mb-0">
-          <div className="p-0.5 bg-gradient-to-tr from-green-300 to-purple-500 rounded-full">
-            <img
+          <div className="w-36 h-36 relative rounded-full">
+            <Image
               alt="Carl"
-              src="./me.jpg"
-              className="w-32 h-32 rounded-full object-cover"
+              src={myPic}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-full"
             />
           </div>
         </div>

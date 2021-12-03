@@ -6,7 +6,7 @@ const ProjectCard = (props: Project) => {
   return (
     <>
       <Link href={props.link} passHref>
-        <div className="w-full md:w-52 rounded p-0.5 bg-gradient-to-tr from-green-300 to-purple-500 shadow-md cursor-pointer transform motion-safe:hover:scale-110 transition-transform duration-150">
+        <div className="w-full md:w-52 rounded p-0.5 bg-gradient-to-tr from-green-300 to-purple-500 shadow-md cursor-pointer transform motion-safe:hover:scale-105 md:motion-safe:hover:scale-110 transition-transform duration-150">
           <div className="flex-col h-full bg-white rounded dark:bg-gray-800 overflow-hidden">
             <div className="px-6 py-4">
               <div className="font-bold text-xl text-gray-700 dark:text-gray-300">
