@@ -8,10 +8,10 @@ module.exports = {
     extend: {},
     fontFamily: {
       sans: ["IBM Plex Sans", ...fontFamily.sans],
-    }
+    },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
-}
+  plugins: [require("@plaiceholder/tailwindcss")],
+};
