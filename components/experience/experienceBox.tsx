@@ -1,10 +1,15 @@
 import React from "react";
 import type { Experience } from "@/assets/types";
+import { motion } from "framer-motion";
+import { item } from "@/assets/animations";
 
 const ExperienceBox = (props: Experience) => {
   return (
     <>
-      <div className="w-full rounded p-0.5 bg-gradient-to-tr from-green-300 to-purple-500 shadow-md transition duration-300">
+      <motion.div
+        variants={item}
+        className="w-full rounded p-0.5 bg-gradient-to-tr from-green-300 to-purple-500 shadow-md transition duration-300"
+      >
         <div className="flex-col h-full rounded bg-white dark:bg-gray-800 overflow-hidden">
           <div className="flex px-6 py-4 mb-2 justify-between items-center">
             <div className="block w-1/2">
@@ -32,7 +37,7 @@ const ExperienceBox = (props: Experience) => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

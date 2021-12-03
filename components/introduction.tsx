@@ -21,7 +21,7 @@ const Introduction = () => {
         initial="hidden"
         whileInView="visible"
         transition={transition}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.8 }}
         className="flex flex-wrap-reverse w-full justify-between items-center"
       >
         <div className="flex-col w-full md:w-1/2 justify-center">

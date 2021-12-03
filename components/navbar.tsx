@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import { SunIcon, MoonIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Footer from "@/components/footer";
+import { motion } from "framer-motion";
+import { variants, transition, item } from "@/assets/animations";
 
 type Props = {
   children?: ReactNode;
@@ -47,17 +49,30 @@ const Navbar = (props: Props) => {
         <nav className="hidden md:flex w-full p-4 h-24 justify-center">
           <div className="flex w-3/5 mx-auto justify-between items-center">
             <div className="flex">
-              <ul className="inline-flex space-x-4">
+              <motion.ul
+                variants={variants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={transition}
+                className="inline-flex space-x-4"
+              >
                 <Link href="/" passHref>
-                  <li className="link">Home</li>
+                  <motion.li variants={item} className="link">
+                    Home
+                  </motion.li>
                 </Link>
                 <Link href="/projects" passHref>
-                  <li className="link">Projects</li>
+                  <motion.li variants={item} className="link">
+                    Projects
+                  </motion.li>
                 </Link>
                 <Link href="/snippets" passHref>
-                  <li className="link">Snippetyard</li>
+                  <motion.li variants={item} className="link">
+                    Snippetyard
+                  </motion.li>
                 </Link>
-              </ul>
+              </motion.ul>
             </div>
             <div className="flex">{renderThemeButton()}</div>
           </div>

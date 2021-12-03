@@ -2,6 +2,8 @@ import React from "react";
 import ExperienceBox from "@/components/experience/experienceBox";
 import { experiences } from "@/assets/experiences";
 import type { Experience } from "@/assets/types";
+import { motion } from "framer-motion";
+import { variants, transition } from "@/assets/animations";
 
 const ExperienceTimeline = () => {
   return (
@@ -9,7 +11,14 @@ const ExperienceTimeline = () => {
       <p className="font-bold text-xl text-gray-700 dark:text-gray-300 my-8">
         Experience
       </p>
-      <div className="grid w-full grid-cols-1 gap-4">
+      <motion.div
+        variants={variants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        transition={transition}
+        className="grid w-full grid-cols-1 gap-4"
+      >
         {experiences.map((experience: Experience, i: number) => (
           <ExperienceBox
             key={i}
@@ -21,7 +30,7 @@ const ExperienceTimeline = () => {
             description={experience.description}
           />
         ))}
-      </div>
+      </motion.div>
     </>
   );
 };
