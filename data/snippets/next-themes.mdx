@@ -10,7 +10,7 @@ slug: "next-themes"
 Changing the background or overall theme/color of web applications has become a trendy way of improving the UX/UI.
 But better, the so many open-source devtools or libraries that enbale this practise to be a common trend are the ones that need more reconing.
 
-Here we are going to take a particular look at how we can take advantage of the [**next-themes**]() package to change the theme color of an app coated with [Tailwind CSS]().
+Here we are going to take a particular look at how we can take advantage of the [**next-themes**](https://www.npmjs.com/package/next-themes) package to change the theme color of an app coated with [Tailwind CSS](https://tailwindcss.com/).
 
 _Assuming you already have a next-app installed & setup, we are going straight to the point._
 
@@ -76,7 +76,7 @@ const Home: NextPage = () => {
 
   const [mounted, setMounted] = useState(false);
 
-  // to ensure the component is mounted
+  // Set mounted variable to true
 
   useEffect(() => {
     setMounted(true);
@@ -85,6 +85,7 @@ const Home: NextPage = () => {
   // Render theme button depending on current theme
 
   const renderThemeButton = () => {
+    // ensure component is mounted
     if (!mounted) return null;
     const currentTheme = theme === "system" ? systemTheme : theme;
     if (currentTheme === "dark") {

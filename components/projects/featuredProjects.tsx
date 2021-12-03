@@ -4,13 +4,30 @@ import ProjectCard from "@/components/projects/projectCard";
 import { ArrowCircleRightIcon } from "@heroicons/react/outline";
 import { projects } from "@/assets/projects";
 import type { Project } from "@/assets/types";
+import { motion } from "framer-motion";
 
 const FeaturedProjects = () => {
+  const variants = {
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: { opacity: 1, scale: 1 },
+  };
+
+  const transition = {
+    type: "spring",
+    stiffness: 100,
+  };
   return (
     <>
-      <p className="font-bold text-xl text-gray-700 dark:text-gray-300 my-8">
+      <motion.p
+        variants={variants}
+        initial="hidden"
+        whileInView="visible"
+        transition={transition}
+        viewport={{ once: true }}
+        className="font-bold text-xl text-gray-700 dark:text-gray-300 my-8"
+      >
         Featured Projects
-      </p>
+      </motion.p>
       <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {projects.slice(0, 3).map((project: Project, i: number) => (
           <ProjectCard

@@ -1,11 +1,29 @@
 import React from "react";
 import Image from "next/image";
 import myPic from "public/me.jpg";
+import { motion } from "framer-motion";
 
 const Introduction = () => {
+  const variants = {
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: { opacity: 1, scale: 1 },
+  };
+
+  const transition = {
+    type: "spring",
+    stiffness: 100,
+  };
+
   return (
     <>
-      <div className="flex flex-wrap-reverse w-full justify-between items-center">
+      <motion.div
+        variants={variants}
+        initial="hidden"
+        whileInView="visible"
+        transition={transition}
+        viewport={{ once: true }}
+        className="flex flex-wrap-reverse w-full justify-between items-center"
+      >
         <div className="flex-col w-full md:w-1/2 justify-center">
           <p className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-purple-500 text-center md:text-justify">
             Carl Nolan
@@ -32,10 +50,11 @@ const Introduction = () => {
               layout="fill"
               objectFit="cover"
               className="rounded-full"
+              priority
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

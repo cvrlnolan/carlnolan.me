@@ -5,7 +5,7 @@ import Navbar from "@/components/navbar";
 import Introduction from "@/components/introduction";
 import FeaturedProjects from "@/components/projects/featuredProjects";
 import ExperienceTimeline from "@/components/experience/experience";
-import Skills from "@/components/skills/masteredSkills";
+import Skills from "@/components/skills/skillTable";
 
 const Home: NextPage = () => {
   return (
