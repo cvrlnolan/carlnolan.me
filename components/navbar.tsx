@@ -71,7 +71,7 @@ const Navbar = (props: Props) => {
   return (
     <>
       <div className="flex-col p-4 mx-auto w-full min-h-screen antialiased bg-gray-50 dark:bg-gray-900 transition duration-300">
-        <nav className="hidden md:flex w-full p-4 h-24 justify-center">
+        <nav className="hidden md:flex w-full p-4 h-24 justify-center sticky top-0 z-50 bg-gray-50 dark:bg-gray-900 bg-opacity-90 dark:bg-opacity-70">
           <div className="flex w-3/5 mx-auto justify-between items-center">
             <div className="flex">
               <motion.ul
@@ -102,7 +102,7 @@ const Navbar = (props: Props) => {
             <div className="flex">{renderThemeButton()}</div>
           </div>
         </nav>
-        <nav className="flex md:hidden w-full p-4 h-24 justify-center">
+        <nav className="flex-col md:hidden w-full p-4 justify-center sticky top-0 z-50 bg-gray-50 dark:bg-gray-900 bg-opacity-90 dark:bg-opacity-70">
           <div className="flex px-2 w-full mx-auto justify-between items-center">
             <div className="flex">
               <button onClick={() => setOpened(!opened)}>
@@ -115,35 +115,35 @@ const Navbar = (props: Props) => {
             </div>
             <div className="flex">{renderThemeButton()}</div>
           </div>
+          <motion.div
+            variants={mobileVariants}
+            animate={opened ? "open" : "closed"}
+            transition={transition}
+            layout
+            className={`${
+              opened ? "flex" : "hidden"
+            } w-full mx-auto justify-center md:hidden`}
+          >
+            <ul className="block space-y-4">
+              <Link href="/" passHref>
+                <motion.li variants={mobileItem} className="link">
+                  Home
+                </motion.li>
+              </Link>
+              <Link href="/projects" passHref>
+                <motion.li variants={mobileItem} className="link">
+                  Projects
+                </motion.li>
+              </Link>
+              <Link href="/snippets" passHref>
+                <motion.li variants={mobileItem} className="link">
+                  Snippetyard
+                </motion.li>
+              </Link>
+            </ul>
+          </motion.div>
         </nav>
-        <motion.div
-          variants={mobileVariants}
-          animate={opened ? "open" : "closed"}
-          transition={transition}
-          layout
-          className={`${
-            opened ? "flex" : "hidden"
-          } w-full mx-auto justify-center md:hidden`}
-        >
-          <ul className="block space-y-4">
-            <Link href="/" passHref>
-              <motion.li variants={mobileItem} className="link">
-                Home
-              </motion.li>
-            </Link>
-            <Link href="/projects" passHref>
-              <motion.li variants={mobileItem} className="link">
-                Projects
-              </motion.li>
-            </Link>
-            <Link href="/snippets" passHref>
-              <motion.li variants={mobileItem} className="link">
-                Snippetyard
-              </motion.li>
-            </Link>
-          </ul>
-        </motion.div>
-        <div className="flex-col flex-grow w-full md:w-3/5 mt-6 mx-auto items-center">
+        <div className="flex-col flex-grow w-full md:w-3/5 mt-8 mx-auto items-center">
           {props.children}
         </div>
         <Footer />
