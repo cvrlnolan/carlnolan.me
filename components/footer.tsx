@@ -1,7 +1,16 @@
 import React from "react";
 import Link from "next/link";
+import axios from "axios";
+import useSWR from "swr";
 
 const Footer = () => {
+  const fetcher = (url: string) => axios.get(url).then((res) => res.data);
+
+  const { data: response, error } = useSWR("/api/spotify", fetcher);
+
+  if (response) {
+    console.log(response);
+  }
   return (
     <>
       <div className="flex-col w-full md:w-3/5 mt-6 mx-auto items-center">

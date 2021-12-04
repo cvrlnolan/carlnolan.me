@@ -10,6 +10,7 @@
   "dependencies": {
     "@heroicons/react": "^1.0.5",
     "@plaiceholder/tailwindcss": "^2.2.0",
+    "axios": "^0.24.0",
     "framer-motion": "^5.3.3",
     "gray-matter": "^4.0.3",
     "next": "12.0.4",
@@ -18,7 +19,8 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-syntax-highlighter": "^15.4.5",
-    "sharp": "^0.29.3"
+    "sharp": "^0.29.3",
+    "swr": "^1.1.0"
   },
   "devDependencies": {
     "@types/node": "16.11.7",
