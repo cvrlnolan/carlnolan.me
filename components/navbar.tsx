@@ -43,6 +43,31 @@ const Navbar = (props: Props) => {
     }
   };
 
+  const mobileVariants = {
+    open: {
+      opacity: 1,
+      y: 0,
+      height: "auto",
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+      },
+    },
+    closed: {
+      opacity: 0,
+      y: "-100%",
+      height: 0,
+      transition: {
+        when: "afterChildren",
+      },
+    },
+  };
+
+  const mobileItem = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
+  };
+
   return (
     <>
       <div className="flex-col p-4 mx-auto w-full min-h-screen antialiased bg-gray-50 dark:bg-gray-900 transition duration-300">
@@ -91,23 +116,33 @@ const Navbar = (props: Props) => {
             <div className="flex">{renderThemeButton()}</div>
           </div>
         </nav>
-        <div
+        <motion.div
+          variants={mobileVariants}
+          animate={opened ? "open" : "closed"}
+          transition={transition}
+          layout
           className={`${
             opened ? "flex" : "hidden"
           } w-full mx-auto justify-center md:hidden`}
         >
           <ul className="block space-y-4">
             <Link href="/" passHref>
-              <li className="link">Home</li>
+              <motion.li variants={mobileItem} className="link">
+                Home
+              </motion.li>
             </Link>
             <Link href="/projects" passHref>
-              <li className="link">Projects</li>
+              <motion.li variants={mobileItem} className="link">
+                Projects
+              </motion.li>
             </Link>
             <Link href="/snippets" passHref>
-              <li className="link">Snippetyard</li>
+              <motion.li variants={mobileItem} className="link">
+                Snippetyard
+              </motion.li>
             </Link>
           </ul>
-        </div>
+        </motion.div>
         <div className="flex-col flex-grow w-full md:w-3/5 mt-6 mx-auto items-center">
           {props.children}
         </div>
