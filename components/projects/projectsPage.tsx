@@ -2,6 +2,8 @@ import React from "react";
 import ProjectCard from "@/components/projects/projectCard";
 import { projects } from "@/assets/projects";
 import type { Project } from "@/assets/types";
+import { motion } from "framer-motion";
+import { variants, transition } from "@/assets/animations";
 
 const ProjectsPage = () => {
   return (
@@ -15,7 +17,14 @@ const ProjectsPage = () => {
           experimental projects with regards to my skill set.
         </p>
       </div>
-      <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <motion.div
+        variants={variants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+        transition={transition}
+        className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+      >
         {projects.map((project: Project, i: number) => (
           <ProjectCard
             key={i}
@@ -25,7 +34,7 @@ const ProjectsPage = () => {
             link={project.link}
           />
         ))}
-      </div>
+      </motion.div>
     </>
   );
 };

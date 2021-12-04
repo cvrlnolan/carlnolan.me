@@ -1,6 +1,8 @@
 import React from "react";
 import SnippetCard from "@/components/snippets/snippetCard";
 import type { SnippetProps, SnippetPost } from "@/assets/types";
+import { motion } from "framer-motion";
+import { variants, transition } from "@/assets/animations";
 
 const SnippetsPage = (props: SnippetProps) => {
   return (
@@ -18,7 +20,14 @@ const SnippetsPage = (props: SnippetProps) => {
           I personally resolve to this, over blog writing 😝
         </p>
       </div>
-      <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <motion.div
+        variants={variants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+        transition={transition}
+        className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+      >
         {props.posts.map((post: SnippetPost) => (
           <SnippetCard
             key={post.data.title}
@@ -28,7 +37,7 @@ const SnippetsPage = (props: SnippetProps) => {
             slug={post.data.slug}
           />
         ))}
-      </div>
+      </motion.div>
     </>
   );
 };

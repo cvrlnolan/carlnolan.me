@@ -4,7 +4,13 @@ import { useTheme } from "next-themes";
 import { SunIcon, MoonIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Footer from "@/components/footer";
 import { motion } from "framer-motion";
-import { variants, transition, item } from "@/assets/animations";
+import {
+  variants,
+  mobileVariants,
+  mobileItem,
+  transition,
+  item,
+} from "@/assets/animations";
 
 type Props = {
   children?: ReactNode;
@@ -41,31 +47,6 @@ const Navbar = (props: Props) => {
         </>
       );
     }
-  };
-
-  const mobileVariants = {
-    open: {
-      opacity: 1,
-      y: 0,
-      height: "auto",
-      transition: {
-        when: "beforeChildren",
-        staggerChildren: 0.2,
-      },
-    },
-    closed: {
-      opacity: 0,
-      y: "-100%",
-      height: 0,
-      transition: {
-        when: "afterChildren",
-      },
-    },
-  };
-
-  const mobileItem = {
-    open: { opacity: 1, x: 0 },
-    closed: { opacity: 0, x: "-100%" },
   };
 
   return (
@@ -119,10 +100,9 @@ const Navbar = (props: Props) => {
             variants={mobileVariants}
             animate={opened ? "open" : "closed"}
             transition={transition}
-            layout
             className={`${
               opened ? "flex" : "hidden"
-            } w-full mx-auto justify-center md:hidden`}
+            } w-full mx-auto mt-4 justify-center md:hidden`}
           >
             <ul className="block space-y-4">
               <Link href="/" passHref>
