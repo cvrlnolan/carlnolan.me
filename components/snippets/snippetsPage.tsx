@@ -1,7 +1,7 @@
 import React from "react";
 import SnippetCard from "@/components/snippets/snippetCard";
 import type { SnippetProps, SnippetPost } from "@/assets/types";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { variants, transition } from "@/assets/animations";
 
 const SnippetsPage = (props: SnippetProps) => {
@@ -26,17 +26,20 @@ const SnippetsPage = (props: SnippetProps) => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
         transition={transition}
+        layout
         className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
       >
-        {props.posts.map((post: SnippetPost) => (
-          <SnippetCard
-            key={post.data.title}
-            title={post.data.title}
-            publishedAt={post.data.publishedAt}
-            summary={post.data.summary}
-            slug={post.data.slug}
-          />
-        ))}
+        <AnimatePresence>
+          {props.posts.map((post: SnippetPost) => (
+            <SnippetCard
+              key={post.data.title}
+              title={post.data.title}
+              publishedAt={post.data.publishedAt}
+              summary={post.data.summary}
+              slug={post.data.slug}
+            />
+          ))}
+        </AnimatePresence>
       </motion.div>
     </>
   );

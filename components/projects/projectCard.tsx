@@ -9,6 +9,8 @@ const ProjectCard = (props: Project) => {
     <>
       <motion.a
         variants={item}
+        layout
+        exit={{ opacity: 0 }}
         href={props.link}
         target="_blank"
         rel="noopener noreferrer"

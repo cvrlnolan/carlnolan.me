@@ -4,7 +4,7 @@ import ProjectCard from "@/components/projects/projectCard";
 import { ArrowCircleRightIcon } from "@heroicons/react/outline";
 import { projects } from "@/assets/projects";
 import type { Project } from "@/assets/types";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { variants, transition } from "@/assets/animations";
 
 const FeaturedProjects = () => {
@@ -21,15 +21,17 @@ const FeaturedProjects = () => {
         transition={transition}
         className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
       >
-        {projects.slice(0, 3).map((project: Project, i: number) => (
-          <ProjectCard
-            key={i}
-            id={project.id}
-            title={project.title}
-            tools={project.tools}
-            link={project.link}
-          />
-        ))}
+        <AnimatePresence>
+          {projects.slice(0, 3).map((project: Project, i: number) => (
+            <ProjectCard
+              key={i}
+              id={project.id}
+              title={project.title}
+              tools={project.tools}
+              link={project.link}
+            />
+          ))}
+        </AnimatePresence>
       </motion.div>
       <div className="flex w-full mt-4 justify-end">
         <Link href="/projects" passHref>

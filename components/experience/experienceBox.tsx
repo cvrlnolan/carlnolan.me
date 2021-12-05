@@ -8,6 +8,8 @@ const ExperienceBox = (props: Experience) => {
     <>
       <motion.div
         variants={item}
+        exit={{ opacity: 0 }}
+        layout
         className="w-full rounded p-0.5 bg-gradient-to-tr from-green-300 to-purple-500 shadow-md transition duration-300"
       >
         <div className="flex-col h-full rounded bg-white dark:bg-gray-800 overflow-hidden">

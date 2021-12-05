@@ -8,7 +8,7 @@ const Footer = () => {
   const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
   const { data: response, error } = useSWR("/api/spotify", fetcher, {
-    refreshInterval: 1000,
+    refreshInterval: 5000,
   });
 
   // if (response) {

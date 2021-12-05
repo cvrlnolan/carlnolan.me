@@ -10,6 +10,8 @@ const SnippetCard = (props: SnippetData) => {
       <Link href={`/snippets/${props.slug}`} passHref>
         <motion.div
           variants={item}
+          exit={{ opacity: 0 }}
+          layout
           className="w-full md:w-52 rounded shadow-md p-0.5 bg-gradient-to-tr from-green-300 to-purple-500 cursor-pointer transform motion-safe:hover:scale-105 md:motion-safe:hover:scale-110 transition-transform duration-150"
         >
           <div className="flex-col h-full bg-white dark:bg-gray-800 overflow-hidden rounded">

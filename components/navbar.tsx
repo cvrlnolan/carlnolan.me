@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import { SunIcon, MoonIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Footer from "@/components/footer";
-import { motion } from "framer-motion";
+import { m, LazyMotion } from "framer-motion";
 import {
   variants,
   mobileVariants,
@@ -15,6 +15,8 @@ import {
 type Props = {
   children?: ReactNode;
 };
+
+const animationFeatures = import("@/lib/features").then((res) => res.default);
 
 const Navbar = (props: Props) => {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -55,30 +57,32 @@ const Navbar = (props: Props) => {
         <nav className="hidden md:flex w-full p-4 h-24 justify-center sticky top-0 z-50 bg-gray-50 dark:bg-gray-900 bg-opacity-90 dark:bg-opacity-70">
           <div className="flex w-3/5 mx-auto justify-between items-center">
             <div className="flex">
-              <motion.ul
-                variants={variants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={transition}
-                className="inline-flex space-x-4"
-              >
-                <Link href="/" passHref>
-                  <motion.li variants={item} className="link">
-                    Home
-                  </motion.li>
-                </Link>
-                <Link href="/projects" passHref>
-                  <motion.li variants={item} className="link">
-                    Projects
-                  </motion.li>
-                </Link>
-                <Link href="/snippets" passHref>
-                  <motion.li variants={item} className="link">
-                    Snippetyard
-                  </motion.li>
-                </Link>
-              </motion.ul>
+              <LazyMotion features={() => animationFeatures}>
+                <m.ul
+                  variants={variants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  transition={transition}
+                  className="inline-flex space-x-4"
+                >
+                  <Link href="/" passHref>
+                    <m.li variants={item} className="link">
+                      Home
+                    </m.li>
+                  </Link>
+                  <Link href="/projects" passHref>
+                    <m.li variants={item} className="link">
+                      Projects
+                    </m.li>
+                  </Link>
+                  <Link href="/snippets" passHref>
+                    <m.li variants={item} className="link">
+                      Snippetyard
+                    </m.li>
+                  </Link>
+                </m.ul>
+              </LazyMotion>
             </div>
             <div className="flex">{renderThemeButton()}</div>
           </div>
@@ -96,32 +100,34 @@ const Navbar = (props: Props) => {
             </div>
             <div className="flex">{renderThemeButton()}</div>
           </div>
-          <motion.div
-            variants={mobileVariants}
-            animate={opened ? "open" : "closed"}
-            transition={transition}
-            className={`${
-              opened ? "flex" : "hidden"
-            } w-full mx-auto mt-4 justify-center md:hidden`}
-          >
-            <ul className="block space-y-4">
-              <Link href="/" passHref>
-                <motion.li variants={mobileItem} className="link">
-                  Home
-                </motion.li>
-              </Link>
-              <Link href="/projects" passHref>
-                <motion.li variants={mobileItem} className="link">
-                  Projects
-                </motion.li>
-              </Link>
-              <Link href="/snippets" passHref>
-                <motion.li variants={mobileItem} className="link">
-                  Snippetyard
-                </motion.li>
-              </Link>
-            </ul>
-          </motion.div>
+          <LazyMotion features={() => animationFeatures}>
+            <m.div
+              variants={mobileVariants}
+              animate={opened ? "open" : "closed"}
+              transition={transition}
+              className={`${
+                opened ? "flex" : "hidden"
+              } w-full mx-auto mt-4 justify-center md:hidden`}
+            >
+              <m.ul className="block space-y-4">
+                <Link href="/" passHref>
+                  <m.li variants={mobileItem} className="link">
+                    Home
+                  </m.li>
+                </Link>
+                <Link href="/projects" passHref>
+                  <m.li variants={mobileItem} className="link">
+                    Projects
+                  </m.li>
+                </Link>
+                <Link href="/snippets" passHref>
+                  <m.li variants={mobileItem} className="link">
+                    Snippetyard
+                  </m.li>
+                </Link>
+              </m.ul>
+            </m.div>
+          </LazyMotion>
         </nav>
         <div className="flex-col flex-grow w-full md:w-3/5 mt-8 mx-auto items-center">
           {props.children}
