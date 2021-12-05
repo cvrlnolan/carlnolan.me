@@ -30,8 +30,5 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Runs Prettier
-        run: npm prettier --write ./
-
       - name: Runs next lint
         run: npm lint
