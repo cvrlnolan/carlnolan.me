@@ -3,14 +3,13 @@ name: Build
 on:
   push:
     branches:
-    - main
+      - main
   pull_request:
     branches:
-    - main
+      - main
   schedule:
     - cron: "0 2 * * 1-5"
   workflow_dispatch:
-
 
 jobs:
   build:
@@ -35,3 +34,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install --legacy-peer-deps
+
+      - name: Build project
+        run: npm run build
