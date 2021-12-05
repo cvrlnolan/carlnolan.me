@@ -59,20 +59,46 @@ const Footer = () => {
               </Link>
             </ul>
             <ul className="block space-y-4">
-              <Link href="https://github.com/cvrlnolan" passHref>
-                <li className="link">GitHub</li>
-              </Link>
-              <Link href="https://twitter.com" passHref>
-                <li className="link">Twitter</li>
-              </Link>
-              <Link href="mailto:georgecvrl@gmail.com" passHref>
-                <li className="link">Mail</li>
-              </Link>
+              <li className="link">
+                <a
+                  href="https://github.com/cvrlnolan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              </li>
+
+              <li className="link">
+                <a
+                  href="https://twitter.com/realcarlnolan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Twitter
+                </a>
+              </li>
+
+              <li className="link">
+                <a
+                  href="mailto:georgecvrl@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Mail
+                </a>
+              </li>
             </ul>
             <ul className="block space-y-4">
-              <Link href="#" passHref>
-                <li className="link">Resume</li>
-              </Link>
+              <li className="link">
+                <a
+                  href="https://docs.google.com/document/d/1XfgL4AiU-9mAxX8Rqym7f31_SG1ohx-j0FZJS7osZcY/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Resume
+                </a>
+              </li>
             </ul>
           </div>
           <div className="flex justify-center lg:justify-end">

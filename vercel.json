@@ -1,0 +1,5 @@
+{
+  "regions": ["all"],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
