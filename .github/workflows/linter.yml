@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  lint:
     name: Lint
     runs-on: ${{ matrix.os }}
 
@@ -19,7 +19,7 @@ jobs:
         node-version: [16.x]
         os: [ubuntu-latest, macOS-latest]
 
-    setps:
+    steps:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
