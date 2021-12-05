@@ -10,8 +10,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  lint:
-    - name: Lint
+  build:
+    name: Lint
     runs-on: ${{ matrix.os }} 
 
       strategy:
