@@ -16,12 +16,11 @@ export const backEnd = [
   "Node.js",
   "Express",
   "Prisma",
-  "Next.js API (Serverless)",
 ];
 
 export const database = ["Google Firebase", "MongoDB", "MySQL"];
 
-export const unitTest = ["Jest", "React-Testing-Library"];
+export const unitTest = ["Jest"];
 
 export const dependencies = ["yarn", "npm"];
 

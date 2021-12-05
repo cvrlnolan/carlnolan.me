@@ -12,7 +12,7 @@ const SkillRow = (props: SkillProps) => {
           {props.technologies.map((tech: string, i: number) => (
             <span
               key={i}
-              className="inline-flex px-2 ml-2 rounded-full font-semibold text-sm text-gray-700 dark:text-gray-300 bg-gray-300 dark:bg-gray-600"
+              className="inline-flex px-2 py-1.5 ml-2 mt-2 rounded-full font-semibold text-sm text-gray-700 dark:text-gray-300 bg-gray-300 dark:bg-gray-600"
             >
               {tech}
             </span>
