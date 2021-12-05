@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.5",
-    "@plaiceholder/tailwindcss": "^2.2.0",
     "axios": "^0.24.0",
     "framer-motion": "^5.3.3",
     "gray-matter": "^4.0.3",

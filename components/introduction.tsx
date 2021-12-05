@@ -43,7 +43,6 @@ const Introduction = () => {
         </div>
         <div className="flex mx-auto md:mx-0 mb-4 md:mb-0">
           <div className="w-36 h-36 relative rounded-full">
-            <div className="asbsolute w-full h-full plaiceholder-[/me.jpg] transform scale-90 filter blur-2xl"></div>
             <Image
               alt="Carl"
               src={myPic}
