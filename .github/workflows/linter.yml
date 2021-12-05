@@ -3,38 +3,38 @@ name: Lint
 on:
   push:
     branches:
-    - main
+      - main
   pull_request:
     branches:
-    - main
+      - main
   workflow_dispatch:
 
 jobs:
   build:
     name: Lint
-    runs-on: ${{ matrix.os }} 
+    runs-on: ${{ matrix.os }}
 
-      strategy:
-        matrix:
-          node-version: [16.x]
-          os: [ubuntu-latest, macOS-latest]
+    strategy:
+      matrix:
+        node-version: [16.x]
+        os: [ubuntu-latest, macOS-latest]
 
-      setps:
-        - name: Checkout repository
-          uses: actions/checkout@v2
-          with:
-            fetch-depth: 2
+    setps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
 
-        - name: Set up Node.js ${{ matrix.node-version }}
-          uses: actions/setup-node@v1
-          with:
-            node-version: ${{ matrix.node-version }}
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
 
-        - name: Install husky
+      - name: Install husky
         run: npm prepare
 
-        - name: Runs Prettier
-          run: npm prettier --write ./
+      - name: Runs Prettier
+        run: npm prettier --write ./
 
-        - name: Runs next lint
-          run: npm lint
+      - name: Runs next lint
+        run: npm lint
