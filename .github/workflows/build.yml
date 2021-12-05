@@ -1,19 +1,19 @@
 name: Build
 
 on:
-push:
-branches:
-  - main
-pull_request:
-branches:
-  - main
-schedule:
-- cron: "0 2 * * 1-5"
-workflow_dispatch:
+  push:
+  branches:
+    - main
+  pull_request:
+  branches:
+    - main
+  schedule:
+    - cron: "0 2 * * 1-5"
+  workflow_dispatch:
 
 
 jobs:
-build:
+  build:
     name: Build on node ${{ matrix.node-version }} and ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
 
