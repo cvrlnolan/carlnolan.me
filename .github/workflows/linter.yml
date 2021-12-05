@@ -35,3 +35,6 @@ jobs:
 
       - name: Runs next lint
         run: npm run lint
+
+      - name: Runs prettier
+        run: npx prettier --check ./
