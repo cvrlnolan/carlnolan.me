@@ -31,4 +31,4 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Runs next lint
-        run: npm lint
+        run: npm run lint
