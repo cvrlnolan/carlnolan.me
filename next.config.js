@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 
+const withPWA = require("next-pwa");
+const runtimeCaching = require("next-pwa/cache");
+const prod = process.env.NODE_ENV === "production";
+
 const securityHeaders = [
   {
     key: "X-DNS-Prefetch-Control",
@@ -27,7 +31,14 @@ const securityHeaders = [
   },
 ];
 
-module.exports = {
+module.exports = withPWA({
+  pwa: {
+    disable: prod ? false : true,
+    dest: "public",
+    runtimeCaching,
+    register: true,
+    skipWaiting: true,
+  },
   reactStrictMode: true,
   swcMinify: true,
   async headers() {
@@ -38,4 +49,17 @@ module.exports = {
       },
     ];
   },
-};
+  webpack(config, { dev, isServer }) {
+    // ${previousConfig...}
+    // Replace React with Preact only in client production build
+    if (!dev && !isServer) {
+      Object.assign(config.resolve.alias, {
+        react: "preact/compat",
+        "react-dom/test-utils": "preact/test-utils",
+        "react-dom": "preact/compat",
+      });
+    }
+
+    return config;
+  },
+});

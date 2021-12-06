@@ -15,7 +15,7 @@ const ExperienceTimeline = () => {
         variants={variants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: true }}
         transition={transition}
         layout
         className="grid w-full grid-cols-1 gap-4"
