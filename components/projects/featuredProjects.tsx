@@ -35,7 +35,7 @@ const FeaturedProjects = () => {
       </motion.div>
       <div className="flex w-full mt-4 justify-end">
         <Link href="/projects" passHref>
-          <button className="btn-projects">
+          <button aria-label="projects_button" className="btn-projects">
             All Projects <ArrowCircleRightIcon className="w-4 h-4 ml-2" />
           </button>
         </Link>

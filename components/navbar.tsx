@@ -35,7 +35,11 @@ const Navbar = (props: Props) => {
     if (currentTheme === "dark") {
       return (
         <>
-          <button className="btn-theme" onClick={() => setTheme("light")}>
+          <button
+            className="btn-theme"
+            aria-label="theme_button"
+            onClick={() => setTheme("light")}
+          >
             <SunIcon className="w-5 h-5" />
           </button>
         </>
@@ -43,7 +47,11 @@ const Navbar = (props: Props) => {
     } else {
       return (
         <>
-          <button className="btn-theme" onClick={() => setTheme("dark")}>
+          <button
+            className="btn-theme"
+            aria-label="theme_button"
+            onClick={() => setTheme("dark")}
+          >
             <MoonIcon className="w-5 h-5" />
           </button>
         </>
