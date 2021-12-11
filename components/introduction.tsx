@@ -32,18 +32,10 @@ const Introduction = () => {
             <p className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-purple-500 text-center md:text-justify">
               Carl Nolan
             </p>
-            <p className="bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-green-500 text-center md:text-justify">
-              Writes clean code.
-            </p>
-            <p className="bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-green-500 text-center md:text-justify">
-              Fueled by simplicity.
-            </p>
-            <p className="bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-green-500 text-center md:text-justify">
-              Navigates the web like a pirate.
-            </p>
-            <p className="bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-green-500 text-center md:text-justify">
-              A free electron in a nuclear world.
-            </p>
+            <p className="intro_text">Writes clean code.</p>
+            <p className="intro_text">Fueled by simplicity.</p>
+            <p className="intro_text">Navigates the web like a pirate.</p>
+            <p className="intro_text">A free electron in a nuclear world.</p>
           </div>
           <div className="flex mx-auto md:mx-0 mb-4 md:mb-0">
             <div className="w-36 h-36 relative rounded-full">

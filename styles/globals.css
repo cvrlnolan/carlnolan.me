@@ -37,4 +37,8 @@ a {
   .link {
     @apply cursor-pointer bg-clip-text text-transparent bg-gray-700 dark:bg-gray-300 hover:bg-gradient-to-r from-purple-300 to-green-500;
   }
+
+  .intro_text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-green-500 text-center md:text-justify;
+  }
 }

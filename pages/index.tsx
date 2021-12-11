@@ -1,11 +1,19 @@
 import type { NextPage } from "next";
 import React from "react";
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import Navbar from "@/components/navbar";
 import Introduction from "@/components/introduction";
-import FeaturedProjects from "@/components/projects/featuredProjects";
-import ExperienceTimeline from "@/components/experience/experience";
-import Skills from "@/components/skills/skillTable";
+
+const FeaturedProjects = dynamic(
+  () => import("@/components/projects/featuredProjects")
+);
+
+const Skills = dynamic(() => import("@/components/skills/skillTable"));
+
+const ExperienceTimeline = dynamic(
+  () => import("@/components/experience/experience")
+);
 
 const Home: NextPage = () => {
   return (
