@@ -61,7 +61,7 @@ const Navbar = (props: Props) => {
 
   return (
     <>
-      <div className="flex-col mx-auto w-full min-h-screen antialiased bg-stone-100 dark:bg-slate-800 transition duration-300">
+      <div className="flex-col p-4 mx-auto w-full min-h-screen antialiased bg-stone-100 dark:bg-slate-800 transition duration-300">
         <nav className="hidden md:flex w-full p-4 h-24 justify-center sticky top-0 z-50 bg-stone-100 dark:bg-slate-800 bg-opacity-90 dark:bg-opacity-70">
           <div className="flex w-3/5 mx-auto justify-between items-center">
             <div className="flex">
@@ -95,7 +95,7 @@ const Navbar = (props: Props) => {
             <div className="flex">{renderThemeButton()}</div>
           </div>
         </nav>
-        <nav className="flex-col md:hidden w-full p-4 justify-center sticky top-0 z-50 bg-gray-50 dark:bg-gray-900 bg-opacity-90 dark:bg-opacity-70">
+        <nav className="flex-col md:hidden w-full p-4 justify-center sticky top-0 z-50 bg-stone-100 dark:bg-slate-800 bg-opacity-90 dark:bg-opacity-70">
           <div className="flex px-2 w-full mx-auto justify-between items-center">
             <div className="flex">
               <button onClick={() => setOpened(!opened)}>
