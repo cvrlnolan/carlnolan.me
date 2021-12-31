@@ -103,7 +103,7 @@ const Footer = () => {
           </div>
           <div className="flex justify-center lg:justify-end">
             <span className="text-sm text-gray-700 dark:text-gray-300">
-              2021 Copyright &copy; Carl Nolan
+              {new Date().getFullYear()} Copyright &copy; Carl Nolan
             </span>
           </div>
         </div>
