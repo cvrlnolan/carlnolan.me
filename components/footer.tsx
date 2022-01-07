@@ -99,6 +99,15 @@ const Footer = () => {
                   Resume
                 </a>
               </li>
+              <li className="link">
+                <a
+                  href="https://www.upwork.com/freelancers/~013eb7d16333254f46"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Upwork
+                </a>
+              </li>
             </ul>
           </div>
           <div className="flex justify-center lg:justify-end">
