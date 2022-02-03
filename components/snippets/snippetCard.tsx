@@ -1,8 +1,9 @@
-import React from "react";
-import Link from "next/link";
-import type { SnippetData } from "@/assets/types";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import React from "react";
+
 import { item } from "@/assets/animations";
+import type { SnippetData } from "@/assets/types";
 
 const SnippetCard: React.FC<{ props: SnippetData }> = ({ props }) => {
   return (

@@ -1,7 +1,8 @@
-import React from "react";
-import type { Project } from "@/assets/types";
 import { motion } from "framer-motion";
+import React from "react";
+
 import { item } from "@/assets/animations";
+import type { Project } from "@/assets/types";
 
 const ProjectCard: React.FC<{ props: Project }> = ({ props }) => {
   return (

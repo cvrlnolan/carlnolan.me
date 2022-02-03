@@ -1,8 +1,9 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
+
+import { transition, variants } from "@/assets/animations";
+import type { SnippetPost, SnippetProps } from "@/assets/types";
 import SnippetCard from "@/components/snippets/snippetCard";
-import type { SnippetProps, SnippetPost } from "@/assets/types";
-import { motion, AnimatePresence } from "framer-motion";
-import { variants, transition } from "@/assets/animations";
 
 const SnippetsPage = (props: SnippetProps) => {
   return (

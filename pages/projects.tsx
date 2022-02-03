@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
-import React from "react";
 import Head from "next/head";
+import React from "react";
+
 import Navbar from "@/components/navbar";
 import ProjectsPage from "@/components/projects/projectsPage";
 

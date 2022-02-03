@@ -1,16 +1,17 @@
-import React, { useState, useEffect, ReactNode } from "react";
+import { MenuIcon, MoonIcon, SunIcon, XIcon } from "@heroicons/react/outline";
+import { LazyMotion, m } from "framer-motion";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import { SunIcon, MoonIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
-import Footer from "@/components/footer";
-import { m, LazyMotion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+
 import {
-  variants,
-  mobileVariants,
-  mobileItem,
-  transition,
   item,
+  mobileItem,
+  mobileVariants,
+  transition,
+  variants,
 } from "@/assets/animations";
+import Footer from "@/components/footer";
 
 const animationFeatures = import("@/lib/features").then((res) => res.default);
 

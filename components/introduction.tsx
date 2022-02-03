@@ -1,7 +1,7 @@
-import React from "react";
+import { LazyMotion, m } from "framer-motion";
 import Image from "next/image";
 import myPic from "public/me.png";
-import { m, LazyMotion } from "framer-motion";
+import React from "react";
 
 const animationFeatures = import("@/lib/features").then((res) => res.default);
 

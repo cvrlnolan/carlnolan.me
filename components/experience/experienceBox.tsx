@@ -1,7 +1,8 @@
-import React from "react";
-import type { Experience } from "@/assets/types";
 import { motion } from "framer-motion";
+import React from "react";
+
 import { item } from "@/assets/animations";
+import type { Experience } from "@/assets/types";
 
 const ExperienceBox: React.FC<{ props: Experience }> = ({ props }) => {
   return (

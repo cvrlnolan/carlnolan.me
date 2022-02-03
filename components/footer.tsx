@@ -1,13 +1,14 @@
-import React from "react";
-import Link from "next/link";
 import axios from "axios";
+import Link from "next/link";
+import React from "react";
 import useSWR from "swr";
+
 import SpotifyLogo from "@/components/spotifyLogo";
 
 const Footer: React.FC = () => {
   const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
-  const { data: response, error } = useSWR("/api/spotify", fetcher, {
+  const { data: response } = useSWR("/api/spotify", fetcher, {
     refreshInterval: 5000,
   });
 
@@ -18,8 +19,8 @@ const Footer: React.FC = () => {
   const renderArtists = (artists: any) => {
     if (artists) {
       const len = artists.length;
-      let artistNames = [];
-      let artistsString: string;
+      const artistNames = [];
+      let artistsString: string = "";
       for (let i = 0; i < len; i++) {
         artistNames.push(artists[i].name);
       }

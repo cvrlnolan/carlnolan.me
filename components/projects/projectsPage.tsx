@@ -1,9 +1,10 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
-import ProjectCard from "@/components/projects/projectCard";
+
+import { transition, variants } from "@/assets/animations";
 import { projects } from "@/assets/projects";
 import type { Project } from "@/assets/types";
-import { motion, AnimatePresence } from "framer-motion";
-import { variants, transition } from "@/assets/animations";
+import ProjectCard from "@/components/projects/projectCard";
 
 const ProjectsPage: React.FC = () => {
   return (

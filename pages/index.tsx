@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
-import React from "react";
-import Head from "next/head";
 import dynamic from "next/dynamic";
-import Navbar from "@/components/navbar";
+import Head from "next/head";
+import React from "react";
+
 import Introduction from "@/components/introduction";
+import Navbar from "@/components/navbar";
 
 const FeaturedProjects = dynamic(
   () => import("@/components/projects/featuredProjects")

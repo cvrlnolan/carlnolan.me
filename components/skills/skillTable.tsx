@@ -1,15 +1,16 @@
+import { LazyMotion, m } from "framer-motion";
 import React from "react";
+
 import {
-  frontEnd,
   backEnd,
   database,
-  unitTest,
   dependencies,
+  frontEnd,
   mobileDev,
+  unitTest,
   versionControl,
 } from "@/assets/skillStack";
 import SkillRow from "@/components/skills/skillRow";
-import { m, LazyMotion } from "framer-motion";
 
 const animationFeatures = import("@/lib/features").then((res) => res.default);
 

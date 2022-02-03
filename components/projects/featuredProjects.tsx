@@ -1,11 +1,12 @@
-import React from "react";
-import Link from "next/link";
-import ProjectCard from "@/components/projects/projectCard";
 import { ArrowCircleRightIcon } from "@heroicons/react/outline";
+import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
+import React from "react";
+
+import { transition, variants } from "@/assets/animations";
 import { projects } from "@/assets/projects";
 import type { Project } from "@/assets/types";
-import { motion, AnimatePresence } from "framer-motion";
-import { variants, transition } from "@/assets/animations";
+import ProjectCard from "@/components/projects/projectCard";
 
 const FeaturedProjects: React.FC = () => {
   return (

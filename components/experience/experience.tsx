@@ -1,9 +1,10 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
-import ExperienceBox from "@/components/experience/experienceBox";
+
+import { transition, variants } from "@/assets/animations";
 import { experiences } from "@/assets/experiences";
 import type { Experience } from "@/assets/types";
-import { motion, AnimatePresence } from "framer-motion";
-import { variants, transition } from "@/assets/animations";
+import ExperienceBox from "@/components/experience/experienceBox";
 
 const ExperienceTimeline: React.FC = () => {
   return (

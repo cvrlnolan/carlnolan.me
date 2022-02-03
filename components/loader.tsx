@@ -1,6 +1,6 @@
-import React from "react";
-import NProgress from "nprogress";
 import { useRouter } from "next/router";
+import NProgress from "nprogress";
+import React from "react";
 import { useEffect } from "react";
 
 export default function Progress() {
@@ -26,6 +26,6 @@ export default function Progress() {
       router.events.off("routeChangeComplete", done);
       router.events.off("routeChangeError", done);
     };
-  }, []);
+  }, [router.events]);
   return <></>;
 }

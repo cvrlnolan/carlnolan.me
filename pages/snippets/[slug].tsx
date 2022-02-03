@@ -1,10 +1,11 @@
-import React from "react";
-import Head from "next/head";
-import type { GetStaticPaths, GetStaticProps } from "next";
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import { getFiles, getFileBySlug } from "@/lib/getMDX";
 import SnippetLayout from "layouts/snippetLayout";
+import type { GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import React from "react";
+
 import MDXComponents from "@/components/snippets/mdxComponents";
+import { getFileBySlug, getFiles } from "@/lib/getMDX";
 
 type Props = {
   mdxSource: MDXRemoteSerializeResult;

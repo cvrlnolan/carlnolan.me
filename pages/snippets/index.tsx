@@ -1,13 +1,14 @@
 import fs from "fs";
 import matter from "gray-matter";
-import path from "path";
 import { GetStaticProps } from "next";
-import React from "react";
 import Head from "next/head";
+import path from "path";
+import React from "react";
+
+import type { SnippetProps } from "@/assets/types";
 import Navbar from "@/components/navbar";
 import SnippetsPage from "@/components/snippets/snippetsPage";
-import { root, getFiles } from "@/lib/getMDX";
-import type { SnippetProps } from "@/assets/types";
+import { getFiles, root } from "@/lib/getMDX";
 
 function Snippets(props: SnippetProps) {
   return (

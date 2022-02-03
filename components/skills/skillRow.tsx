@@ -1,4 +1,5 @@
 import React from "react";
+
 import type { SkillProps } from "@/assets/types";
 
 const SkillRow = (props: SkillProps) => {
