@@ -5,7 +5,7 @@ import { m, LazyMotion } from "framer-motion";
 
 const animationFeatures = import("@/lib/features").then((res) => res.default);
 
-const Introduction = () => {
+const Introduction: React.FC = () => {
   const variants = {
     hidden: { opacity: 0, scale: 0.5 },
     visible: { opacity: 1, scale: 1 },

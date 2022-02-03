@@ -12,13 +12,9 @@ import {
   item,
 } from "@/assets/animations";
 
-type Props = {
-  children?: ReactNode;
-};
-
 const animationFeatures = import("@/lib/features").then((res) => res.default);
 
-const Navbar = (props: Props) => {
+const Navbar: React.FC = ({ children }) => {
   const { systemTheme, theme, setTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
@@ -138,7 +134,7 @@ const Navbar = (props: Props) => {
           </LazyMotion>
         </nav>
         <div className="flex-col flex-grow w-full md:w-3/5 mt-8 mx-auto items-center">
-          {props.children}
+          {children}
         </div>
         <Footer />
       </div>

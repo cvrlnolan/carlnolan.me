@@ -1,10 +1,9 @@
 import React from "react";
-import Link from "next/link";
 import type { Project } from "@/assets/types";
 import { motion } from "framer-motion";
 import { item } from "@/assets/animations";
 
-const ProjectCard = (props: Project) => {
+const ProjectCard: React.FC<{ props: Project }> = ({ props }) => {
   return (
     <>
       <motion.a

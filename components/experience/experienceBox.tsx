@@ -3,7 +3,7 @@ import type { Experience } from "@/assets/types";
 import { motion } from "framer-motion";
 import { item } from "@/assets/animations";
 
-const ExperienceBox = (props: Experience) => {
+const ExperienceBox: React.FC<{ props: Experience }> = ({ props }) => {
   return (
     <>
       <motion.div

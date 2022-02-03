@@ -31,13 +31,7 @@ const SnippetsPage = (props: SnippetProps) => {
       >
         <AnimatePresence>
           {props.posts.map((post: SnippetPost) => (
-            <SnippetCard
-              key={post.data.title}
-              title={post.data.title}
-              publishedAt={post.data.publishedAt}
-              summary={post.data.summary}
-              slug={post.data.slug}
-            />
+            <SnippetCard key={post.data.title} props={post.data} />
           ))}
         </AnimatePresence>
       </motion.div>

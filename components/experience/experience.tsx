@@ -5,7 +5,7 @@ import type { Experience } from "@/assets/types";
 import { motion, AnimatePresence } from "framer-motion";
 import { variants, transition } from "@/assets/animations";
 
-const ExperienceTimeline = () => {
+const ExperienceTimeline: React.FC = () => {
   return (
     <>
       <p className="font-bold text-xl text-gray-700 dark:text-gray-300 my-8">
@@ -22,15 +22,7 @@ const ExperienceTimeline = () => {
       >
         <AnimatePresence>
           {experiences.map((experience: Experience, i: number) => (
-            <ExperienceBox
-              key={i}
-              id={experience.id}
-              companyName={experience.companyName}
-              title={experience.title}
-              period={experience.period}
-              jobType={experience.jobType}
-              description={experience.description}
-            />
+            <ExperienceBox key={i} props={experience} />
           ))}
         </AnimatePresence>
       </motion.div>

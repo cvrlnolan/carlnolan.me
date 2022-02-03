@@ -7,7 +7,7 @@ import type { Project } from "@/assets/types";
 import { motion, AnimatePresence } from "framer-motion";
 import { variants, transition } from "@/assets/animations";
 
-const FeaturedProjects = () => {
+const FeaturedProjects: React.FC = () => {
   return (
     <>
       <p className="font-bold text-xl text-gray-700 dark:text-gray-300 my-8">
@@ -23,13 +23,7 @@ const FeaturedProjects = () => {
       >
         <AnimatePresence>
           {projects.slice(0, 3).map((project: Project, i: number) => (
-            <ProjectCard
-              key={i}
-              id={project.id}
-              title={project.title}
-              tools={project.tools}
-              link={project.link}
-            />
+            <ProjectCard key={i} props={project} />
           ))}
         </AnimatePresence>
       </motion.div>

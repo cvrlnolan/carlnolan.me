@@ -4,7 +4,7 @@ import axios from "axios";
 import useSWR from "swr";
 import SpotifyLogo from "@/components/spotifyLogo";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
   const { data: response, error } = useSWR("/api/spotify", fetcher, {

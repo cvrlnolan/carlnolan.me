@@ -5,7 +5,7 @@ import type { Project } from "@/assets/types";
 import { motion, AnimatePresence } from "framer-motion";
 import { variants, transition } from "@/assets/animations";
 
-const ProjectsPage = () => {
+const ProjectsPage: React.FC = () => {
   return (
     <>
       <div className="block w-full my-8 space-y-4">
@@ -28,13 +28,7 @@ const ProjectsPage = () => {
       >
         <AnimatePresence>
           {projects.map((project: Project, i: number) => (
-            <ProjectCard
-              key={i}
-              id={project.id}
-              title={project.title}
-              tools={project.tools}
-              link={project.link}
-            />
+            <ProjectCard key={i} props={project} />
           ))}
         </AnimatePresence>
       </motion.div>

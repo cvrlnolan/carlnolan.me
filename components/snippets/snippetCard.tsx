@@ -4,7 +4,7 @@ import type { SnippetData } from "@/assets/types";
 import { motion } from "framer-motion";
 import { item } from "@/assets/animations";
 
-const SnippetCard = (props: SnippetData) => {
+const SnippetCard: React.FC<{ props: SnippetData }> = ({ props }) => {
   return (
     <>
       <Link href={`/snippets/${props.slug}`} passHref>

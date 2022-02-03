@@ -1,6 +1,6 @@
 import React from "react";
 
-const SpotifyLogo = () => {
+const SpotifyLogo: React.FC = () => {
   return (
     <>
       <svg
