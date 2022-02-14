@@ -2602,14 +2602,14 @@ fraction.js@^4.1.1:
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.1.2.tgz#13e420a92422b6cf244dff8690ed89401029fbe8"
   integrity sha512-o2RiJQ6DZaR/5+Si0qJUIy637QMRudSi9kU/FFzx9EZazrIdnBgpU+3sEWCxAVhH2RtxW2Oz+T4p2o8uOPVcgA==
 
-framer-motion@^5.3.3:
-  version "5.3.3"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-5.3.3.tgz#366fa11512de4e79e061eb09a68278dad92b4419"
-  integrity sha512-s4mz0E4/TPTKXqKnpb578S0Jp/0JhAyvDpULFe95kHnWs1lOCKf2+EEl6yAX+1wfPLUYokZzudiK9jam0ZAVdQ==
+framer-motion@^6.2.4:
+  version "6.2.4"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-6.2.4.tgz#3d9c61be3fb8381a770efccdb56cc421de662979"
+  integrity sha512-1UfnSG4c4CefKft6QMYGx8AWt3TtaFoR/Ax4dkuDDD5BDDeIuUm7gesmJrF8GzxeX/i6fMm8+MEdPngUyPVdLA==
   dependencies:
     framesync "6.0.1"
     hey-listen "^1.0.8"
-    popmotion "11.0.0"
+    popmotion "11.0.3"
     style-value-types "5.0.0"
     tslib "^2.1.0"
   optionalDependencies:
@@ -2621,13 +2621,6 @@ framesync@6.0.1:
   integrity sha512-fUY88kXvGiIItgNC7wcTOl0SNRCVXMKSWW2Yzfmn7EKNc+MpCzcz9DhdHcdjbrtN3c6R4H5dTY2jiCpPdysEjA==
   dependencies:
     tslib "^2.1.0"
-
-framesync@^6.0.1:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/framesync/-/framesync-6.1.0.tgz#b22cf9afba52a9a895668b09e033b6a61e901c41"
-  integrity sha512-aBX+hdWAvwiJYeQlFLY2533VxeL6OEu71CAgV4GGKksrj6+dE6i7K86WSSiRBEARCoJn5bFqffhg4l07eA27tg==
-  dependencies:
-    tslib "^2.3.1"
 
 fs-constants@^1.0.0:
   version "1.0.0"
@@ -4027,12 +4020,12 @@ pkg-dir@^5.0.0:
   dependencies:
     find-up "^5.0.0"
 
-popmotion@11.0.0:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-11.0.0.tgz#910e2e7077d9aeba520db8744d40bb5354992212"
-  integrity sha512-kJDyaG00TtcANP5JZ51od+DCqopxBm2a/Txh3Usu23L9qntjY5wumvcVf578N8qXEHR1a+jx9XCv8zOntdYalQ==
+popmotion@11.0.3:
+  version "11.0.3"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-11.0.3.tgz#565c5f6590bbcddab7a33a074bb2ba97e24b0cc9"
+  integrity sha512-Y55FLdj3UxkR7Vl3s7Qr4e9m0onSnP8W7d/xQLsoJM40vs6UKHFdygs6SWryasTZYqugMjm3BepCF4CWXDiHgA==
   dependencies:
-    framesync "^6.0.1"
+    framesync "6.0.1"
     hey-listen "^1.0.8"
     style-value-types "5.0.0"
     tslib "^2.1.0"
@@ -5096,7 +5089,7 @@ tslib@^1.8.1:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.1.0, tslib@^2.3.1:
+tslib@^2.1.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
