@@ -8,7 +8,7 @@ export const experiences: Experience[] = [
     period: "December 2021 - Present day",
     jobType: "Full-time",
     description:
-      "Software Engineer Agent. Member of the Automation & Flow Engineering team.",
+      "Software Engineer Agent. Member of the Automation & Flow Engineering teams.",
   },
   {
     id: 2,
