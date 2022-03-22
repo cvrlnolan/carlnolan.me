@@ -33,7 +33,7 @@ const Skills = () => {
           layout
           className="w-full rounded p-0.5 bg-gradient-to-tr from-green-300 to-purple-500 shadow-md"
         >
-          <table className="table-auto rounded bg-white dark:bg-gray-800">
+          <table className="table-auto w-full rounded bg-white dark:bg-gray-800">
             <thead>
               <tr>
                 <th className="px-6 py-2 text-gray-700 dark:text-gray-300">
