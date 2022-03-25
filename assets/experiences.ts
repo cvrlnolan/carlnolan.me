@@ -5,7 +5,7 @@ export const experiences: Experience[] = [
     id: 1,
     companyName: "Invisible Technologies Inc, Remote",
     title: "Software Engineer Agent",
-    period: "December 2021 - Present day",
+    period: "December 2021 - Today",
     jobType: "Full-time",
     description:
       "Software Engineer Agent. Member of the Automation & Flow Engineering teams.",
@@ -14,8 +14,8 @@ export const experiences: Experience[] = [
     id: 2,
     companyName: "Freelancing & Personal Development, Remote",
     title: "Fullstack Web Developer",
-    period: "2018 - Present day",
-    jobType: "Full-time",
+    period: "2018 - Today",
+    jobType: "Part-time",
     description:
       "Verified Upwork Freelancer.\n Also completed inventory management projects for local clients which mostly involved the development of web based applications or systems",
   },
