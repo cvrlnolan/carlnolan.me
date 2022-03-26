@@ -4,6 +4,7 @@ export const frontEnd = [
   "Reactjs",
   "Next.js",
   "Tailwind CSS",
+  "Angular",
   "Laravel",
   "PHP",
   "CSS",
@@ -14,13 +15,14 @@ export const backEnd = [
   "JavaScript",
   "TypeScript",
   "Node.js",
+  "Python",
   "Express",
   "Prisma",
 ];
 
-export const database = ["Google Firebase", "MongoDB", "MySQL"];
+export const database = ["Google Firebase", "MongoDB", "Postgres", "MySQL"];
 
-export const unitTest = ["Jest"];
+export const unitTest = ["Jest", "RTL", "mocha"];
 
 export const dependencies = ["yarn", "npm"];
 
