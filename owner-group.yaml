@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: george-group
+  description: My personal group
+spec:
+  type: team
+  profile:
+    displayName: George's group
+    email: georgecvrl0@gmail.com
+    picture: https://firebasestorage.googleapis.com/v0/b/joov-staging.appspot.com/o/users%2Fprofile%2Fimg%2FeWfWsNMJeahgIgHPLjYnAY488lY2?alt=media&token=be8c7246-a43f-44ab-80b0-d3e47902959a
+  children: []
+  members: [cvrlnolan]
