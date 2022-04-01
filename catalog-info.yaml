@@ -2,9 +2,16 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: carlnolan.me
+  description: Carl Nolan's personal website
   annotations:
     github.com/project-slug: cvrlnolan/carlnolan.me
+    circleci.com/project-slug: github/cvrlnolan/carlnolan.me
+  tags:
+    - react
+    - next.js
+  links:
+    - url: https://www.carlnolan.me/
 spec:
-  type: other
-  lifecycle: unknown
-  owner: backstage
+  type: website
+  lifecycle: production
+  owner: georgecvrl0@gmail.com
