@@ -8,7 +8,6 @@ metadata:
     circleci.com/project-slug: github/cvrlnolan/carlnolan.me
   tags:
     - react
-    - next.js
   links:
     - url: https://www.carlnolan.me/
 spec:
