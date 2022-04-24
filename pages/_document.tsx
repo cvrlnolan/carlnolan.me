@@ -19,7 +19,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <meta name="twitter:card" content="summary" />
-          <meta name="twitter:url" content="https://carlnolan-me.vercel.app/" />
+          <meta name="twitter:url" content="https://www.carlnolan.me/" />
           <meta name="twitter:title" content="Carl Nolan" />
           <meta
             name="twitter:description"
@@ -37,7 +37,7 @@ class MyDocument extends Document {
             content="Carl Nolan's personal website & portfolio."
           />
           <meta property="og:site_name" content="Carl Nolan" />
-          <meta property="og:url" content="https://carlnolan-me.vercel.app/" />
+          <meta property="og:url" content="https://www.carlnolan.me/" />
           <meta
             property="og:image"
             content="https://carlnolan-me.vercel.app/apple-touch-icon.png"
