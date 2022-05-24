@@ -59,7 +59,7 @@ const Navbar: React.FC = ({ children }) => {
   return (
     <>
       <div className="flex-col p-4 mx-auto w-full min-h-screen antialiased bg-stone-100 dark:bg-slate-800 transition duration-300">
-        <nav className="hidden md:flex w-full p-4 h-24 justify-center sticky top-0 z-50 bg-stone-100 dark:bg-slate-800 bg-opacity-90 dark:bg-opacity-70">
+        <nav className="hidden md:flex w-full py-4 h-24 justify-center sticky top-0 z-50 bg-stone-100 dark:bg-slate-800 bg-opacity-90 dark:bg-opacity-70">
           <div className="flex w-3/5 mx-auto justify-between items-center">
             <div className="flex">
               <LazyMotion features={() => animationFeatures}>
