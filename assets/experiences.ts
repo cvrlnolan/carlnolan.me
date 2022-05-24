@@ -4,11 +4,10 @@ export const experiences: Experience[] = [
   {
     id: 1,
     companyName: "Invisible Technologies Inc, Remote",
-    title: "Software Engineer Agent",
+    title: "Software Engineer",
     period: "December 2021 - Today",
     jobType: "Full-time",
-    description:
-      "Software Engineer Agent. Member of the Automation & Flow Engineering teams.",
+    description: "Software Engineer. Member of the Solutions Engineering Team.",
   },
   {
     id: 2,
