@@ -15,3 +15,4 @@ spec:
   lifecycle: production
   owner: georgecvrl0@gmail.com
   client: Invisible
+  proprietary: ReactJS, Nextjs, Vercel
