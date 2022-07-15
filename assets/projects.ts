@@ -5,7 +5,7 @@ export const projects: Project[] = [
     id: 1,
     title: "lootyclub",
     tools: ["nextjs", "chakra-ui", "firebase"],
-    link: "https://app.lootyclub.com",
+    link: "https://lootyclub1-0.vercel.app/",
   },
   {
     id: 2,
