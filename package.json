@@ -28,7 +28,7 @@
     "swr": "^1.1.0"
   },
   "devDependencies": {
-    "@types/node": "16.11.7",
+    "@types/node": "18.7.15",
     "@types/nprogress": "^0.2.0",
     "@types/react": "17.0.38",
     "@types/react-syntax-highlighter": "^13.5.2",
